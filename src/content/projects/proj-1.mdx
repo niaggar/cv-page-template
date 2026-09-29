@@ -1,10 +1,11 @@
 ---
-title: "Quantum Portfolio Optimization with QAOA (QAMP)"
+title: "Simulating Open Quantum Systems with Tensor Networks and TEBD"
 slug: "proj-1"
-year: 2026
-tags: ["QAOA", "Qiskit", "Finance"]
+year: 2023
 ---
 
-Project developed as a mentee in the IBM Quantum Qiskit Advocate Mentorship Program (Nov 2025 – Feb 2026). It focuses on the design of cost Hamiltonians for portfolio optimization and on the evaluation of QAOA performance under realistic hardware constraints.
+Similar to closed systems, tensor networks and TEBD can be used to simulate the time evolution of open systems. This works through vectorizing the density matrix (a matrix product operator) so that it looks like a state (a matrix product state). In this case the time-evolution is given by
 
-<a href="https://www.credly.com/badges/3a5d8400-18c2-488d-bce4-d8ef8aa4da31/public_url" target="_blank" rel="noopener">QAMP badge</a>
+which could also have been obtained through naive integration of the density matrix
+
+Here I provide some code I have written in a Jupyter notebook to exactly simulate Lindblad dynamics for small open systems, and in another notebook provide code to simulate Lindblad dynamics using tensor networks and TEBD. While the number of sites is small in these example codes this is to benchmark the tensor network methods against the exact methods, and the tensor network methods can handle spin chains of length L = 64 with bond dimension χ = 20 in one hour without further optimization.

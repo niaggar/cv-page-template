@@ -1,0 +1,29 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+import { getEntry } from 'astro:content';
+
+const title = `Slides - ${SITE_TITLE}`;
+
+
+const slides = await getEntry('single', 'slides');
+const { Content } = await slides!.render();
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={title} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header />
+		
+		<main>
+			<Content />
+		</main>
+
+		<Footer />
+	</body>
+</html>

@@ -1,18 +1,14 @@
 ---
 title: "Research"
-updated: "September 2026"
+updated: "March 2025"
 ---
 
 # {frontmatter.title}
 
-I work on quantum information and many-body physics from a computational and resource-theoretic perspective. The common thread is to understand how much entanglement, and how much non-stabilizer resource, a given quantum circuit architecture can generate, and to exploit that structure to simulate or bound it classically.
+This page highlights research interests in the physics of complex quantum systems, covering areas such as condensed matter physics, quantum simulation, and quantum information. It includes references to publications, presentations, and ongoing projects, along with a brief overview of the research focus.
 
-Areas of interest: quantum information theory; quantum simulation and tensor-network methods; quantum algorithms and variational methods; algorithmic complexity and resource estimation in quantum circuits; quantum optimization and hybrid quantum-classical computing.
-
-The starting point of my thesis is the minimal-cut principle: for a circuit represented as a tensor network of qubit (dimension-2) bonds, the entanglement entropy of a bipartition $A|\bar A$ is bounded by the size of the minimal cut $\gamma_A^{\min}$ separating the two regions,
+Now with latex support! $E=mc^2$. As a more complex example,
 
 <div style={{textAlign: 'center'}}>
-$$S_A \le |\gamma_A^{\min}|\,\ln 2 .$$
+$$i\hbar\frac{\partial}{\partial t}\Psi(x,t) = -\frac{\hbar^2}{2m}\nabla^2\Psi(x,t) + V(x)\Psi(x,t)$$
 </div>
-
-Building an efficient graph-based algorithm on this bound allowed me to study architecture-dependent saturation of the entanglement entropy and to establish a system-size-dependent entanglement velocity $v_E \sim 1/2L$, confirmed analytically and numerically with KPZ scaling.
