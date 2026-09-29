@@ -4,15 +4,12 @@ import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 import ListContainer from '../components/ListContainer.astro';
 import ListElement from '../components/ListElement.astro';
-import Tags from '../components/Tags.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 import { getCollection, getEntry, render } from 'astro:content';
 
 const title = `Research - ${SITE_TITLE}`;
 
-const research = (await getCollection('research')).sort(
-	(a, b) => b.data.year - a.data.year || b.data.importance - a.data.importance,
-);
+const research = await getCollection('research');
 
 const researchInfo = await getEntry('single', 'research');
 const { Content } = await researchInfo!.render();
@@ -37,9 +34,7 @@ const { Content } = await researchInfo!.render();
 								key={item.data.slug}
 								data={item.data}
 								Content={Content}
-							>
-								<Tags tagList={item.data.tags || []} />
-							</ListElement>
+							/>
 						);
 					})}
 				</ListContainer>

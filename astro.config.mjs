@@ -8,8 +8,8 @@ import rehypeKatex from 'rehype-katex';
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://PiPevafo.github.io/',
-	base: '/cv-andres',
+	site: 'https://niaggar.github.io/',
+	base: '/cv-page-template',
 	integrations: [mdx(), sitemap()],
 	markdown: {
 		remarkPlugins: [remarkMath],

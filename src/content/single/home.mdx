@@ -1,55 +1,15 @@
 ---
-title: "Andres Felipe Valencia Fonseca"
-updated: "September 2026"
+title: "NAME SURNAME, some titles"
+updated: "March 2025"
+url: "https://example.com"
 ---
-
-import { BASE_URL, LINKS } from '../../consts';
 
 # {frontmatter.title}
 
-*MSc student in Physics, Universidad de los Andes (Bogotá, Colombia) · Qiskit Advocate*
+import { BASE_URL } from '../../consts';
 
-I am a physicist working on quantum information and quantum many-body physics. I completed my B.Sc. in Physics at Universidad del Valle (Cali) in 2025, graduating first in my class (GPA 4.41/5.0) with a meritorious thesis, and I am now a master's student at Universidad de los Andes.
+<img src={BASE_URL + "/images/main-banner.jpg"} alt="Profile picture" style="width: 100%; height: auto;"/>
 
-My research revolves around three connected themes:
+Welcome! My name is NAME SURNAME. This website serves as a space to share research interests, study notes, presentations, and independent projects. The content here reflects ongoing academic work, personal explorations, and resources that may be useful to others. Feel free to look around and reach out through the contact section.
 
-- **Entanglement structure of quantum circuits**: tensor-network representations, minimal-cut bounds and entanglement growth in local circuits, including doped circuits with non-Clifford gates.
-- **Quantum algorithms and optimization**: variational and constraint-preserving algorithms (QAOA, quantum tree generators) for combinatorial and financial problems.
-- **Classical simulation and resource estimation**: tensor-network methods and non-stabilizer resources as a measure of what NISQ-era circuits can and cannot do.
-
-This site collects my [research](./research), [publications](./publications), [posters and slides](./presentations) and [projects](./projects).
-
-<a href={LINKS.github} target="_blank" rel="noopener">GitHub</a> ·
-<a href={LINKS.linkedin} target="_blank" rel="noopener">LinkedIn</a> ·
-<a href={LINKS.researchgate} target="_blank" rel="noopener">ResearchGate</a> ·
-<a href={LINKS.scholar} target="_blank" rel="noopener">Google Scholar</a>
-
-## Education
-
-- **M.Sc. in Physics**, Universidad de los Andes, Bogotá, Colombia. *2026 – present.*
-- **B.Sc. in Physics**, Universidad del Valle, Cali, Colombia. *2021 – 2025.* GPA 4.41/5.0, first in class. Thesis distinguished as *Meritorious* by the Faculty Council (2026).
-
-## Experience
-
-- **Research internship, GERAD Group, Université du Québec à Montréal (UQAM).** *Jun – Aug 2025.* Quantum optimization with Franklin Djeumou Fomeni.
-- **Undergraduate researcher, Quantic Group, Universidad del Valle.** *Jan 2024 – Jun 2025.* Advisors: Javier Madroñero and William Esteban Salazar.
-- **Teaching assistant, Universidad del Valle.** *2023 – 2025.* Fundamental Physics I (discussion sections, quizzes) and Computational Physics; support monitor for physics students.
-
-## Community and training
-
-- **Qiskit Advocate Mentorship Program (QAMP)**, IBM Quantum. Mentee, Nov 2025 – Feb 2026.
-- **Qiskit Fall Fest 2025**, Universidad del Valle. Organizer.
-- **Qiskit Global Summer School 2025**, IBM Quantum. Participant.
-- **Perimeter–SAIFR–IFT Journeys into Theoretical Physics**, ICTP-SAIFR, São Paulo. Jul 2024.
-- **Nano & Quantum Workshop (QTECNOS)**, Cartagena. Poster presentation, Nov 2024.
-
-## Distinctions
-
-- Meritorious Thesis, Universidad del Valle (2026).
-- Graduated first in class in Physics, Universidad del Valle (2025).
-- Generación E scholarship, Excellence component, Ministry of National Education of Colombia (2020).
-- First place, 2nd Zonal Mathematics Olympiad, medium level, Universidad del Valle (2018).
-
-## Skills
-
-Python, Qiskit, C++, Mathematica, Matlab, LaTeX. Spanish (native), English (academic).
+Here is my <a href={frontmatter.url} target="_blank">CV ({frontmatter.updated})</a>.

@@ -1,10 +1,21 @@
 ---
-title: "Galton Board: beyond the central limit theorem"
+title: "Project 3"
 slug: "proj-3"
-year: 2024
-tags: ["C++", "Simulation", "IPT"]
+year: 2025
+tags: ["quantum", "tensor networks", "TEBD"]
+importance: 2
 ---
 
-Problem prepared for the International Physicists' Tournament (IPT), Universidad del Valle, Mar 2024. I analyzed how the peg size, peg distribution and impact angle of a Galton board modify the resulting probability distributions. Through theoretical analysis and C++ simulations, I showed that non-binomial and non-Gaussian distributions can emerge, leading to deviations from the conventional central limit theorem.
+import { BASE_URL } from '../../consts';
 
-<a href="https://github.com/niaggar/GaltonBoard" target="_blank" rel="noopener">Code</a>
+Similar to closed systems, tensor networks and TEBD can be used to simulate the time evolution of open systems. This works through vectorizing the density matrix (a matrix product operator) so that it looks like a state (a matrix product state). In this case the time-evolution is given by
+
+<img src={BASE_URL + "/images/test1.png"} loading="lazy" alt="Lindblad equation" style="width: 100%; height: auto;"/>
+
+where the Lindbladian superoperator is given by
+
+which could also have been obtained through naive integration of the density matrix
+
+$$ x = e^{\mathcal{L} t} x(0) $$
+
+Here I provide some code I have written in a Jupyter notebook to exactly simulate Lindblad dynamics for small open systems, and in another notebook provide code to simulate Lindblad dynamics using tensor networks and TEBD. While the number of sites is small in these example codes this is to benchmark the tensor network methods against the exact methods, and the tensor network methods can handle spin chains of length L = 64 with bond dimension χ = 20 in one hour without further optimization.
